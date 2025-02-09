@@ -1,5 +1,8 @@
 # Polynomial_Lyapunov_generator
 
+## function_example
+
+
 V_sym = ...
     a(1) * de1^2 + a(2) * de2^2 + a(3) * de1 * de2 + ...
     a(4) * de1^3 + a(5) * de2^3 + a(6) * de1^2 * de2 + a(7) * de1 * de2^2 + ...
@@ -58,3 +61,6 @@ sol =
    -0.1224
    -0.2369
     1.7691
+
+
+## Circular example
