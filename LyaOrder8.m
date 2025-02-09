@@ -1,3 +1,4 @@
+clear
 close all
 
 %% 1. Load the data
@@ -5,7 +6,7 @@ sample_time = 0.05;
 length = 100;
 simulation_time = sample_time * length;
 
-n1 = 10;
+n1 = 50;
 dimension = 2;
 
 for i = 1 : n1
@@ -17,7 +18,7 @@ for i = 1 : n1
     init_dq = initial(i).init_dq;
     init_q = initial(i).init_q;
     
-    data_from_simulink = sim('data');
+    data_from_simulink = sim('circular_data');
 
     de_values = data_from_simulink.de.signals.values;
     dde_values = data_from_simulink.dde.signals.values;
@@ -61,7 +62,49 @@ dV_fun = matlabFunction(dV_sym, 'Vars', {de, a});
 obj_fun = @(x) 0;
 
 %% 4. Define bounds
-x0 = sol;
+x0 = [ 1.6555
+    2.8821
+    0.6178
+    0.8305
+    0.2766
+   -0.8001
+   -0.4364
+    0.0938
+    0.9189
+    0.9298
+   -0.6842
+    0.9413
+    0.9143
+   -0.0220
+    0.6006
+   -0.7153
+   -0.1565
+    0.8316
+    0.5844
+    0.9322
+    0.3115
+   -0.9268
+    0.6983
+    0.8682
+    0.3575
+    0.5155
+    0.5094
+   -0.2155
+    0.3140
+   -0.6576
+    0.4125
+   -0.9363
+   -0.4461
+   -0.9077
+   -0.7659
+    0.6469
+    0.3950
+   -0.3658
+    0.9012
+   -0.9311
+   -0.1224
+   -0.2369
+    1.7691];
 lb = [-10 * ones(42, 1); 0.001];  % λ should be positive
 ub = [10 * ones(42, 1); 10];   % Upper bound
 
