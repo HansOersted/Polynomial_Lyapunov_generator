@@ -152,3 +152,15 @@ function [c, ceq] = nonlinear_constraints(x, n1, length, derivative_training_sam
     end
     ceq = [];
 end
+
+%%
+[X1,X2] = meshgrid(-1:0.1:1,-1:0.1:1);
+
+for i=size(X1,1):-1:1
+    for j = size(X1,2):-1:1
+    V_val(i,j) = V_fun([X1(i,j); X2(i,j)], sol(1:end-1));
+    %dV_val(i,j) = dV_fun([X1(i,j); X2(i,j)], sol(1:end-1));
+    end
+end
+figure
+surf(X1,X2,V_val)
