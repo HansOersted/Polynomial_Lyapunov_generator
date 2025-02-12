@@ -1,0 +1,51 @@
+# MATLAB generated files
+.MATLABDriveTag
+*.asv
+*.autosave
+*.slxc
+*.mlappinstall
+*.mexw32
+*.mexw64
+*.mexmaci64
+*.mexglx
+*.mexa64
+*.mexsol
+*.slx.autosave
+*.mdl.autosave
+
+# Simulink and simulation cache
+slprj/
+simulinkcache/
+codegen/
+scc/
+
+# MATLAB preferences and logs
+.matlab/
+.matlabdrive/
+*.mldatx
+*.mlpkginstall
+*.mlproj
+
+# Workspace and checkpoint files
+*.mat
+*.fig
+*.mexa64
+*.mexw32
+*.mexw64
+*.mexmaci64
+*.mexglx
+*.mexsol
+
+# Backup files
+*~
+*.bak
+*.swp
+*.swo
+
+# Logs
+*.log
+*.out
+
+# Ignore everything except source files
+!*.m
+!*.mlx
